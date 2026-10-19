@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Do Less Diverse Countries Profit More from Natural Resources Than Diverse Countries? | Punto Cieco</title>
+
+<style>
+*{box-sizing:border-box}
+:root{
+  --cream:#F7F2EC;
+  --brown:#2B120E;
+  --brown-soft:#59433C;
+  --brown-light:#6D554D;
+  --sage:#D6E1DE;
+  --line:rgba(43,18,14,.24);
+}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--brown);
+  font-family:Georgia,"Times New Roman",serif;
+  position:relative;
+  isolation:isolate;
+  overflow-x:hidden;
+}
+a{color:inherit}
+
+.craft{
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+  user-select:none;
+  height:auto;
+}
+.craft-1{width:747px;top:650px;left:-455px}
+.craft-2{width:449px;right:-190px;top:1650px}
+.craft-4{width:673px;top:-340px;left:150px}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 2%;
+  gap:20px;
+  position:relative;
+  z-index:5;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  text-decoration:none;
+}
+.logo img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:386.5224px;
+  max-height:136.89335px;
+  object-fit:contain;
+}
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:24px;
+  padding:20px 25px;
+  background:var(--brown);
+}
+nav a{
+  color:var(--cream);
+  text-decoration:none;
+  font:16px Arial,Helvetica,sans-serif;
+}
+nav a:hover,nav a:focus-visible{color:var(--sage)}
+
+main{
+  width:100%;
+  padding:18px 5% 70px;
+  position:relative;
+  z-index:1;
+}
+.article-shell{width:100%;max-width:1500px;margin:0 auto}
+
+.article-topline{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  background:var(--brown);
+  color:var(--sage);
+  border:1px solid var(--brown);
+  padding:12px 16px;
+  margin-bottom:32px;
+  font:11px Arial,Helvetica,sans-serif;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.article-topline span:last-child{text-align:right}
+
+.hero{margin-bottom:58px}
+.hero-title{
+  max-width:1100px;
+  margin:0 auto 26px;
+  text-align:center;
+}
+.hero-title h1{
+  font-size:clamp(42px,6.5vw,84px);
+  font-weight:normal;
+  line-height:1.02;
+  letter-spacing:-2px;
+  margin:0;
+}
+.title-rule{
+  width:95px;
+  height:5px;
+  background:var(--brown);
+  margin:25px auto 0;
+}
+.hero-image{
+  width:100%;
+  height:clamp(250px,43vw,570px);
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  background:var(--sage);
+}
+.image-caption{
+  font:11px/1.5 Arial,Helvetica,sans-serif;
+  color:var(--brown-soft);
+  margin-top:8px;
+  text-align:right;
+}
+
+.section{
+  margin:0 0 56px;
+  position:relative;
+}
+.section-heading{margin-bottom:22px}
+.section-kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font:bold 11px Arial,Helvetica,sans-serif;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.section-kicker:before{
+  content:"";
+  width:35px;
+  height:2px;
+  background:var(--brown);
+  flex-shrink:0;
+}
+.section h2{
+  font-size:clamp(30px,4vw,48px);
+  font-weight:normal;
+  line-height:1.08;
+  letter-spacing:-.8px;
+  margin:0;
+}
+.section-copy{
+  font-size:17px;
+  line-height:1.75;
+  text-align:justify;
+  min-width:0;
+  hyphens:auto;
+}
+.section-copy p{margin:0 0 16px}
+.section-copy p:last-child{margin-bottom:0}
+
+/* ARTICLE SECTIONS: text and images side by side */
+.section-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:start;
+}
+.section-layout > *{min-width:0}
+.section-layout .section-copy{max-width:100%}
+
+/* Anthropology */
+.identity .section-heading{margin-bottom:22px}
+.identity-layout{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:38px;
+  align-items:stretch;
+}
+
+/* Economy */
+.economy{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.economy-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:start;
+}
+.economy .section-heading{margin-bottom:22px}
+
+/* Government */
+.government{padding:4px 0}
+.government-layout{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:38px;
+  align-items:start;
+}
+
+/* History */
+.history{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.history-layout{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:38px;
+  align-items:start;
+}
+.history .section-heading{margin-bottom:22px}
+
+.opinion{padding-top:4px}
+
+.opinion-note{
+  margin-top:24px;
+  padding:20px 24px;
+  background:var(--sage);
+  border-left:3px solid var(--brown);
+  font-size:17px;
+  line-height:1.7;
+}
+.opinion-note p{margin:0}
+
+/* Article images: fill the frames without distortion */
+.image-space{
+  width:100%;
+  height:clamp(260px,29vw,440px);
+  min-height:0;
+  margin:0;
+  padding:0;
+  border:0;
+  background:var(--sage);
+  overflow:hidden;
+  position:relative;
+  align-self:stretch;
+}
+.image-space img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.image-space.wide{height:clamp(320px,34vw,500px)}
+.image-space.medium{height:clamp(260px,29vw,420px)}
+.image-space.small{height:clamp(220px,25vw,350px)}
+.image-space + .image-caption{margin-bottom:0}
+
+/* Writers */
+.endmatter{
+  border-top:2px solid var(--brown);
+  padding-top:28px;
+}
+.authors{
+  display:block;
+  padding:22px 0 26px;
+  border-bottom:1px solid var(--line);
+}
+.endmatter h2{
+  font-size:clamp(26px,3vw,38px);
+  font-weight:normal;
+  line-height:1.1;
+  margin:0;
+}
+.authors-list{
+  font-size:16px;
+  line-height:1.7;
+  margin:0;
+}
+
+.image-credit{
+  font-size:13px;
+  line-height:1.6;
+  color:var(--brown-soft);
+  padding:17px 0 25px;
+  border-bottom:1px solid var(--line);
+}
+
+.bibliography{padding-top:28px}
+.bibliography h2{margin-bottom:20px}
+.bibliography ol{padding-left:22px;margin:0}
+.bibliography li{
+  font:12px/1.7 Arial,Helvetica,sans-serif;
+  overflow-wrap:anywhere;
+  margin-bottom:11px;
+}
+.bibliography a{
+  color:var(--brown-soft);
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.bibliography a:hover{color:var(--brown)}
+
+.back-to-top{
+  display:inline-block;
+  margin-top:32px;
+  padding:13px 18px;
+  background:var(--brown);
+  color:var(--cream);
+  text-decoration:none;
+  font:11px Arial,Helvetica,sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.back-to-top:hover{background:var(--brown-soft)}
+
+@media(max-width:1000px){
+  main{padding-left:4%;padding-right:4%}
+  .section-layout,.identity-layout,.economy-layout,
+  .government-layout,.history-layout{
+    gap:24px;
+  }
+}
+
+@media(max-width:750px){
+  .craft-1{width:467px;left:-400px;top:600px}
+  .craft-2{width:330px;right:-190px;top:1600px}
+  .craft-4{width:390px;top:-220px;left:-50px}
+
+  header{flex-direction:column;align-items:flex-start}
+  nav{width:100%;gap:14px;padding:15px 12px}
+  nav a{font-size:14px}
+
+  main{padding-top:8px;padding-bottom:50px}
+  .article-topline{font-size:9px;letter-spacing:1px;margin-bottom:24px}
+  .hero{margin-bottom:44px}
+  .hero-title h1{letter-spacing:-1.3px}
+  .hero-image{height:320px}
+
+  .section{margin-bottom:44px}
+
+  /* Stack text and image on smaller screens */
+  .section-layout,.identity-layout,.economy-layout,
+  .government-layout,.history-layout{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .image-space{height:300px}
+  .image-space.wide{height:340px}
+  .image-space.medium{height:300px}
+  .image-space.small{height:260px}
+}
+
+@media(max-width:480px){
+  .craft-4{width:300px;top:-150px;left:-35px}
+  .logo{max-width:100%}
+  .logo img{max-width:100%;max-height:115px}
+  nav{gap:5px;padding:12px 5px}
+  nav a{font-size:12px;padding:8px 7px}
+
+  .hero-title h1{font-size:39px}
+  .hero-image{height:250px}
+  .section-copy{font-size:16px;line-height:1.75}
+  .section h2{font-size:31px}
+  .bibliography li{font-size:11px}
+  .image-space,
+  .image-space.medium,
+  .image-space.small{height:230px}
+  .image-space.wide{height:270px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body id="top">
+
+<img class="craft craft-1" src="../images/craft1.png" alt="" aria-hidden="true">
+<img class="craft craft-2" src="../images/craft2.png" alt="" aria-hidden="true">
+<img class="craft craft-4" src="../images/craft4.png" alt="" aria-hidden="true">
+
+<header>
+  <a class="logo" href="../index.html">
+    <img src="../logo.png" alt="Punto Cieco logo">
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="../index.html">Inicio</a>
+    <a href="../nosotros.html">Nosotros</a>
+    <a href="../articulos.html">Artículos</a>
+    <a href="../ayuda.html">Ayuda a los necesitados</a>
+  </nav>
+</header>
+
+<main>
+<article class="article-shell">
+
+  <div class="article-topline">
+    <span>Punto Cieco · Una plana</span>
+    <span>Economy · Environment</span>
+  </div>
+
+  <section class="hero">
+    <div class="hero-title">
+      <h1>Why Do Less Diverse Countries Profit More from Natural Resources Than Diverse Countries?</h1>
+      <div class="title-rule"></div>
+    </div>
+
+    <img
+      class="hero-image"
+      src="https://politica328.wordpress.com/wp-content/uploads/2026/10/c2bfla-diversidad-define-quien-se-beneficia_.png?w=1024"
+      alt="Cover illustration exploring biodiversity, Peru, the United States, and natural resources"
+      fetchpriority="high"
+    >
+
+    <div class="image-caption">Natural resources, economic development, and who benefits from them.</div>
+  </section>
+
+  <!-- 01 · ANTHROPOLOGY -->
+  <section class="section identity" id="anthropology">
+    <div class="section-heading">
+      <div class="section-kicker">01 · Anthropology</div>
+      <h2>Does diversity affect who benefits from natural resources?</h2>
+    </div>
+
+    <div class="identity-layout">
+      <div class="section-copy">
+        <p>Diversity seems like nothing but benefits on paper. It should create economic growth, with the potential of eco-tourism and sustainable resource use , yet it seems that economic power and biodiversity are mutually exclusive. Most economic growth, especially when regarding production, comes from the extreme exploitation of natural resources, causing this biodiversity to slowly die.</p>
+
+        <p>A great example of the situation is shown in Nigeria, a country rich in natural resources, mainly oil, that while heavily exploited, has shown little-to-no development, with those getting richer being the western powers like USA and multiple EU members. This is oftentimes called the “resources curse”, explaining why resource rich countries especially in South America and Africa, lack in development as more powerful countries exert control through modern forms of imperialism.</p>
+
+        <p>Experts on the World Bank report also note that the heavy exploitation of natural resources creates a further division among the classes, with this being especially profitable for those in positions of power while disregarding the smaller businesses and communities that depend on local ecosystems.</p>
+      </div>
+
+      <div class="image-space wide">
+        <img
+          src="../images/articulo-5-antropologia.png"
+          alt="Anthropology: diversity and communities affected by natural resource extraction"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · ECONOMY -->
+  <section class="section economy" id="economy">
+    <div class="section-heading">
+      <div class="section-kicker">02 · Economy</div>
+      <h2>Why does the US capture more value from resources than Peru?</h2>
+    </div>
+
+    <div class="economy-layout">
+      <div class="section-copy">
+        <p>One of the best raw materials in Peru is copper. This material helps Peru make a lot of money. Other countries, like the US, don’t have the same advantages as Peru in terms of natural resources, but they have good organization and more developed supply chains. It seems that Peru doesn’t have the same level of development in these areas.</p>
+
+        <p>In the case of the US, it has invested a lot of money in industries, infrastructure, plants, etc. All of this has the goal of creating more value and making more money. In contrast, the problem in Peru is that it doesn’t invest enough in its supply chains, industries, and infrastructure like the US and other countries do. This makes it more difficult for Peru to create more value from its resources.</p>
+
+        <p>Another important thing is education. Many countries invest in better education to prepare people who can develop these supply chains and work in these industries. In conclusion, if Peru invests more in education, it will have more skilled workers and can improve its supply chains and create more value from its resources.</p>
+      </div>
+
+      <div class="image-space medium">
+        <img
+          src="../images/articulo-5-economia.png"
+          alt="Economy: natural resources, industry, and economic value"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · GOVERNMENT -->
+  <section class="section government" id="government">
+    <div class="section-heading">
+      <div class="section-kicker">03 · Government</div>
+      <h2>Do governments determine who profits from natural resources?</h2>
+    </div>
+
+    <div class="government-layout">
+      <div class="image-space small">
+        <img
+          src="../images/articulo-5-gobierno.png"
+          alt="Government: public institutions and natural resource management"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="section-copy">
+        <p>Illegal copper mining is a growing and very profitable business today. Why? The main reason is the rising global demand for this metal. Copper is needed everywhere to build cars, phones, and power lines.</p>
+
+        <p>Because the global demand is so high, the price of copper remains high. Criminal groups take advantage of this high price to make fast money. But how are they able to keep the profits?</p>
+
+        <p>First, they avoid paying taxes or following environmental rules. Formal mining companies pay millions of dollars to the government, but illegal miners keep all the profits for themselves. Furthermore, they often use cheap, forced labor and ignore safety laws.</p>
+
+        <p>As experts report, this stolen metal is secretly sold in international markets, making the black market extremely attractive. In short, high prices, zero taxes, and low costs make it a very dark but lucrative trade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · HISTORY -->
+  <section class="section history" id="history">
+    <div class="section-heading">
+      <div class="section-kicker">04 · History</div>
+      <h2>How did history shape Peru’s and the US’s resource economies?</h2>
+    </div>
+
+    <div class="history-layout">
+      <div class="section-copy">
+        <p>Peru stands out as one of the countries with the world’s largest copper reserves and is already a one of the world’s leading copper producers and with the promising future of the global energy transition, Peru will be a central player in guaranteeing this mineral for its properfunctioning. In the past, copper extraction boosted the national economy, accounting for nearly 23% of the country’s total exports and the international copper prices increased by more than 70%, strengthening mining investment. This sector is a cornerstone of Peru’s economy, yet, since the early 2000s, the illegal mining, centered on gold, coal and copper, operates in over half the country and the high demand has only boosted the expansion of this damaging activity, leading to biodiversity loss in indigenous and native community territories due to the lack of environmental defenders. The future of our country depends on achieving a satisfactory balance between state governance and economic development.</p>
+      </div>
+
+      <div class="image-space wide">
+        <img
+          src="../images/articulo-5-historia.png"
+          alt="History: the historical role of guano in Peru and coal in the United States"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINION: text only, with no image -->
+  <section class="section opinion" id="opinion">
+    <div class="section-heading">
+      <div class="section-kicker">05 · Young perspectives</div>
+      <h2>Opinion</h2>
+    </div>
+
+    <div class="section-copy">
+      <p>We did an Instagram poll to ask our readers’ opinions about why countries with less natural resource diversity often profit more from their resources. We received many interesting and diverse opinions. The majority of people believe that it is not possible for two reasons: we don’t have the amount of resources required and people believe that we will not be able to surpass the USA because it has one of the biggest industries in the world.</p>
+
+      <div class="opinion-note">
+        <p>However, others think that we do have what is necessary: if we properly take advantage of our rich diversity, we will surely achieve it.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="endmatter">
+    <section class="authors">
+      <p class="authors-list"><strong>Writers:</strong> Luis Gabriel Melendez, Gianluca Oneto, Mikaela Peña, Domenica Valverde, and Valentina Sarria.</p>
+    </section>
+
+    <div class="image-credit">Images generated by ChatGPT.</div>
+
+    <section class="bibliography" id="bibliography">
+      <h2>Bibliography</h2>
+
+      <ol>
+        <li>Convention on Biological Diversity. (n.d.). <em>About the Nagoya Protocol.</em> United Nations Environment Programme. <a href="https://www.cbd.int/abs/about/default.shtml" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Dasgupta, P. (2021). <em>The economics of biodiversity: The Dasgupta review.</em> HM Treasury. <a href="https://www.gov.uk/government/publications/final-report-the-economics-of-biodiversity-the-dasgupta-review" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Namibian Association of CBNRM Support Organisations. (n.d.). <em>NACSO: Namibian Association of CBNRM Support Organisations.</em> <a href="https://nacso.org.na/" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Omeje, K. (2006). <em>The rentier state: Oil-related legislation and conflict in the Niger Delta, Nigeria.</em> ResearchGate. <a href="https://www.researchgate.net/publication/365318969_The_Nigerian_Oil_Economy_and_the_Rentier_State" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>World Bank. (n.d.). <em>Global program on sustainability: Overview.</em> <a href="https://www.worldbank.org/en/programs/global-program-on-sustainability/overview" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Bamber, P., Fernández, V., &amp; Gereffi, G. (2024). Suppliers’ entry, upgrading, and innovation in mining GVCs. <em>Industrial and Corporate Change, 33</em>(4), 922–943. <a href="https://academic.oup.com/icc/article/33/4/922/7471252" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Rio Times Online. (2026, September 5). <em>Peru mining exports boom, but not by that number.</em> <a href="https://www.riotimesonline.com/peru-mining-exports-record-figure-2026/" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>World Bank. (2021). <em>Peru mining sector diagnostic.</em> World Bank Group. <a href="https://documents1.worldbank.org/curated/en/448141632473923087/pdf/Peru-Mining-Sector-Diagnostic.pdf" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>LATCAM. (2022). <em>Value chains in mining: Peru</em> (2nd ed.). <a href="https://www.latcam.ch/wp-content/uploads/2022/08/Value-Chains-in-Mining-Peru_2.pdf" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>International Monetary Fund. (2012). <em>The taxation of petroleum and minerals: Principles, problems and practice.</em> <a href="https://www.elibrary.imf.org/display/book/9781475575170/ch001.xml" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Natural Resource Governance Institute. (2026). <em>Resource Governance Assessment.</em> <a href="https://resourcegovernance.org/resource-governance-assessment" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Natural Resource Governance Institute. (2022). <em>2021 Resource Governance Index: Common questions &amp; answers.</em> <a href="https://resourcegovernance.org/articles/2021-resource-governance-index-common-questions-answers" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>World Bank. (n.d.). <em>Extractives Global Programmatic Support (EGPS).</em> <a href="https://www.worldbank.org/en/programs/egps/overview" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Organisation for Economic Co-operation and Development. (2021). <em>Assessing the impact of the oil governance agenda on Africa’s new producers.</em> OECD Publishing. <a href="https://doi.org/10.1787/ec6161b3-en" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>National Geographic Historia. (n.d.). <em>The guano era: A profitable and cruel business.</em> <a href="https://historia.nationalgeographic.com.es/a/era-guano-negocio-redondo-cruel_19549" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Osterloff, E. (n.d.). <em>Guano mining: Our deadly obsession with bird poo.</em> Natural History Museum. <a href="https://www.nhm.ac.uk/discover/guano-mining-a-deadly-obsession.html" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Instituto del Mar del Perú. (n.d.). <em>Institutional repository.</em> <a href="https://repositorio.imarpe.gob.pe/items/ede3a2d6-7947-4f68-bdaa-35fa0fe52eb0" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>The White House. (2025, April 8). <em>Reinvigorating America’s beautiful clean coal industry and amending Executive Order 14241.</em> <a href="https://www.whitehouse.gov/presidential-actions/2025/04/reinvigorating-americas-beautiful-clean-coal-industry-and-amending-executive-order-14241/" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>Adams, S. P. (2003, January 23). <em>The US coal industry in the nineteenth century.</em> EH.Net Encyclopedia. <a href="https://eh.net/encyclopedia/the-us-coal-industry-in-the-nineteenth-century/" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+
+        <li>U.S. Department of Labor. (n.d.). <em>Coal strike.</em> <a href="https://www.dol.gov/general/aboutdol/history/coalstrike" target="_blank" rel="noopener noreferrer">Read source.</a></li>
+      </ol>
+    </section>
+
+    <a class="back-to-top" href="#top">↑ Back to top</a>
+  </footer>
+
+</article>
+</main>
+
+</body>
+</html>
