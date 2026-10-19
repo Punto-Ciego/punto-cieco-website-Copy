@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Punto Ciego</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #F7F2EC;
+            color: #2B120E;
+            font-family: Georgia, "Times New Roman", serif;
+            position: relative;
+            isolation: isolate;
+            overflow-x: hidden;
+        }
+
+        /* Textured paper decorations */
+        .craft {
+            position: absolute;
+            height: auto;
+            pointer-events: none;
+            user-select: none;
+            z-index: 0;
+        }
+
+        /* Green-and-white picnic paper: 5% smaller and moved down */
+        .craft-3 {
+            width: 931.095px;
+            top: -470px;
+            left: calc(50% - 80px);
+            transform: translateX(-50%);
+        }
+
+        /* Polka-dotted paper shape: raised bottom-left corner */
+        .craft-5 {
+            width: 475.2px;
+            top: auto;
+            bottom: -35px;
+            left: -145px;
+            right: auto;
+        }
+
+        /* Subtle red paper circle with triangular points: shifted farther right */
+        .craft-12 {
+            width: 538.56px;
+            bottom: -35px;
+            right: -205px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 2%;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 386.5224px;
+            max-height: 136.89335px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px 25px;
+            background-color: #2B120E;
+        }
+
+        nav a {
+            color: #F7F2EC;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #D6E1DE;
+        }
+
+        main {
+            padding: 40px 2% 55px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .column {
+            padding: 28px 22px;
+            background-color: #2B120E;
+            color: #F7F2EC;
+        }
+
+        .column h2 {
+            margin: 0 0 24px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: clamp(20px, 2.2vw, 27px);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .column p {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 0 0 18px;
+        }
+
+        @media (max-width: 850px) {
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .column {
+                padding: 30px;
+            }
+
+            .craft-3 {
+                width: 931.095px;
+                top: -470px;
+                left: calc(50% - 80px);
+                transform: translateX(-50%);
+            }
+
+            .craft-5 {
+                width: 475.2px;
+                bottom: -35px;
+                left: -190px;
+                right: auto;
+            }
+
+            .craft-12 {
+                width: 538.56px;
+                bottom: -35px;
+                right: -240px;
+            }
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                gap: 14px;
+                padding: 16px 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                padding-top: 30px;
+            }
+
+            .craft-3 {
+                width: 705.375px;
+                top: -360px;
+                left: calc(50% - 60px);
+                transform: translateX(-50%);
+            }
+
+            .craft-5 {
+                width: 360px;
+                top: auto;
+                bottom: -20px;
+                left: -145px;
+                right: auto;
+            }
+
+            .craft-12 {
+                width: 417.6px;
+                bottom: -20px;
+                right: -180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Textured paper decorations -->
+    <img class="craft craft-3"
+         src="images/craft3.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-5"
+         src="images/craft5.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-12"
+         src="images/craft12.png"
+         alt=""
+         aria-hidden="true">
+
+    <header>
+        <a class="logo" href="index.html">
+            <img src="logo.png" alt="Punto Ciego logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="articulos.html">Artículos</a>
+            <a href="ayuda.html">Ayuda a los necesitados</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="columns">
+            <article class="column">
+                <h2>¿Quiénes somos?</h2>
+
+                <p>
+                    Punto Ciego es una revista de política y opinión
+                    creada por jóvenes y para jóvenes que busca
+                    incentivar a personas de nuestra generación a
+                    tener un rol más activo en política.
+                </p>
+
+                <p>
+                    Partimos de una idea principal: gran parte de
+                    nuestra generación ve la política como algo
+                    perdido, lejano, complicado y simplemente ajeno
+                    a su vida diaria.
+                </p>
+
+                <p>
+                    Por esto buscamos acercar la política a nuestra
+                    realidad, hacerla no solo más entendible y más
+                    cercana, sino sobre todo más relevante.
+                </p>
+
+                <p>
+                    Somos un equipo de estudiantes que trabaja en
+                    distintos idiomas —español, inglés e italiano—
+                    ya que no buscamos limitarnos a una única audiencia.
+                </p>
+            </article>
+
+            <article class="column">
+                <h2>¿Qué hacemos?</h2>
+
+                <p>
+                    En Punto Ciego publicamos artículos donde
+                    abordamos distintos temas políticos desde una
+                    mirada crítica y actual. Exploramos temas
+                    relacionados con la globalización, los sistemas
+                    económicos, el comercio internacional, la
+                    situación en América Latina, etc.
+                </p>
+
+                <p>
+                    Pero el proyecto no se queda solo en los artículos.
+                </p>
+
+                <p>
+                    También buscamos generar interacción: a través
+                    de redes sociales, encuestas y espacios de opinión,
+                    abrimos la conversación para que más personas
+                    puedan participar y dar su punto de vista.
+                </p>
+
+                <p>
+                    Además, estamos presentes en conferencias de
+                    Model United Nations (MUN), donde conectamos
+                    directamente con estudiantes interesados en
+                    estos temas.
+                </p>
+            </article>
+
+            <article class="column">
+                <h2>¿Qué queremos lograr?</h2>
+
+                <p>
+                    Nuestro principal objetivo es hacer que más
+                    jóvenes se interesen en política, pero desde
+                    un lugar más cercano y accesible.
+                </p>
+
+                <p>
+                    Queremos que entiendan mejor lo que está pasando
+                    en el mundo y en el país, que cuestionen, que
+                    desarrollen una opinión propia y que se sientan
+                    parte de estas conversaciones.
+                </p>
+
+                <p>
+                    Al mismo tiempo, buscamos construir un espacio
+                    donde distintas ideas puedan convivir y debatirse
+                    con respeto.
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

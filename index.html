@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Punto Ciego</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #F7F2EC;
+            color: #2B120E;
+            font-family: Georgia, "Times New Roman", serif;
+            position: relative;
+            isolation: isolate;
+        }
+
+        /* Craft-paper decorations */
+        .craft {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            height: auto;
+        }
+
+        .craft-1 {
+            width: 747.1404px;
+            top: 350px;
+            left: -455px;
+            transform: rotate(0deg);
+            transform-origin: center;
+        }
+
+        .craft-2 {
+            width: 449px;
+            right: -190px;
+            bottom: 40px;
+        }
+
+        .craft-4 {
+            width: 673px;
+            top: -340px;
+            left: 150px;
+            right: auto;
+            z-index: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 2%;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 386.5224px;
+            max-height: 136.89335px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px 25px;
+            background-color: #2B120E;
+        }
+
+        nav a {
+            color: #F7F2EC;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #D6E1DE;
+        }
+
+        main {
+            padding: 5px 2% 55px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .recent-heading {
+            position: relative;
+            isolation: isolate;
+            text-align: center;
+            padding: 4px 0 0;
+            margin: 4px 0 25px;
+        }
+
+        .recent-heading h2 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: clamp(36px, 4.5vw, 48px);
+            font-weight: normal;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 38px 18px;
+        }
+
+        .article {
+            min-width: 0;
+        }
+
+        .article-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 0.85;
+            background-color: #2B120E;
+            text-decoration: none;
+        }
+
+        .article-image:hover {
+            background-color: #47231C;
+        }
+
+        /* Cover images */
+        .article-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Article 4: preserve the title on the left */
+        .article:nth-child(2) .article-image {
+            overflow: hidden;
+        }
+
+        .article:nth-child(2) .article-image img {
+            object-fit: cover;
+            object-position: left center;
+            transform-origin: left center;
+        }
+
+        .article:nth-child(2) .article-image:hover img {
+            transform: scale(1.015);
+        }
+
+        .article h3 {
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 1.35;
+            margin: 12px 0 0;
+        }
+
+        .article h3 a {
+            color: #2B120E;
+            text-decoration: none;
+        }
+
+        .article h3 a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 750px) {
+            .craft-1 {
+                width: 466.96284px;
+                left: -400px;
+                top: 364px;
+                transform: rotate(0deg);
+            }
+
+            .craft-2 {
+                width: 390px;
+                right: -190px;
+                bottom: 60px;
+            }
+
+            .craft-4 {
+                width: 390px;
+                top: -220px;
+                left: -50px;
+                right: auto;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                gap: 14px;
+                padding: 16px 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                padding-top: 0;
+            }
+
+            .recent-heading {
+                margin: 4px 0 20px;
+                padding: 4px 0 0;
+            }
+
+            .recent-heading h2 {
+                font-size: clamp(34px, 6.5vw, 46px);
+            }
+
+            .articles {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .articles {
+                grid-template-columns: 1fr;
+            }
+
+            .craft-4 {
+                width: 300px;
+                top: -150px;
+                left: -35px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Decorative craft-paper images -->
+    <img class="craft craft-1"
+         src="images/craft1.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-2"
+         src="images/craft2.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-4"
+         src="images/craft4.png"
+         alt=""
+         aria-hidden="true">
+
+    <header>
+        <a class="logo" href="index.html">
+            <img src="logo.png" alt="Punto Ciego logo">
+        </a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="articulos.html">Artículos</a>
+            <a href="ayuda.html">Ayuda a los necesitados</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="recent-heading">
+            <h2>Artículos recientes</h2>
+        </div>
+
+        <div class="articles">
+
+            <article class="article">
+                <a class="article-image"
+                   href="articulos/articulo-5.html"
+                   aria-label="Leer Does Diversity Affect Who Benefits from Natural Resources?">
+                    <img src="images/articulo-5-portada.png"
+                         alt="Portada de Does Diversity Affect Who Benefits from Natural Resources?">
+                </a>
+                <h3>
+                    <a href="articulos/articulo-5.html">
+                        Does Diversity Affect Who Benefits from Natural Resources?
+                    </a>
+                </h3>
+            </article>
+
+            <article class="article">
+                <a class="article-image"
+                   href="articulos/articulo-4.html"
+                   aria-label="Leer ¿Qué lugar tomarán internacionalmente los escudos de las Américas?">
+                    <img src="images/articulo-4-portada.png"
+                         alt="Portada de ¿Qué lugar tomarán internacionalmente los escudos de las Américas?">
+                </a>
+                <h3>
+                    <a href="articulos/articulo-4.html">
+                        ¿Qué lugar tomarán internacionalmente los escudos de las Américas?
+                    </a>
+                </h3>
+            </article>
+
+            <article class="article">
+                <a class="article-image"
+                   href="articulos/articulo-3.html"
+                   aria-label="Leer Le Olimpiadi moderne e l’eredità del Palio italiano">
+                    <img src="images/articulo-3-portada.png"
+                         alt="Portada de Le Olimpiadi moderne e l’eredità del Palio italiano">
+                </a>
+                <h3>
+                    <a href="articulos/articulo-3.html">
+                        Le Olimpiadi moderne e l’eredità del Palio italiano
+                    </a>
+                </h3>
+            </article>
+
+            <article class="article">
+                <a class="article-image"
+                   href="articulos/articulo-2.html"
+                   aria-label="Leer The Cost of Copper and Illegal Mining in Peru">
+                    <img src="images/articulo-2-portada.png"
+                         alt="Portada de The Cost of Copper and Illegal Mining in Peru">
+                </a>
+                <h3>
+                    <a href="articulos/articulo-2.html">
+                        The Cost of Copper and Illegal Mining in Peru
+                    </a>
+                </h3>
+            </article>
+
+            <article class="article">
+                <a class="article-image"
+                   href="articulos/articulo-1.html"
+                   aria-label="Leer Cómo la guerra de Irán nos afecta">
+                    <img src="images/articulo-1-portada.png"
+                         alt="Portada de Cómo la guerra de Irán nos afecta">
+                </a>
+                <h3>
+                    <a href="articulos/articulo-1.html">
+                        Cómo la guerra de Irán nos afecta
+                    </a>
+                </h3>
+            </article>
+
+        </div>
+    </main>
+
+</body>
+</html>
