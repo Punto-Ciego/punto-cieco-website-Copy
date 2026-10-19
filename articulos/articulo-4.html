@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="¿Qué lugar ocuparán los Escudos de las Américas Unidas internacionalmente? Un análisis de identidad, economía, cooperación y opinión joven.">
+<title>¿Qué lugar ocuparán los Escudos de las Américas Unidas internacionalmente? | Punto Cieco</title>
+
+<style>
+*{box-sizing:border-box}
+:root{--cream:#F7F2EC;--brown:#2B120E;--brown-soft:#59433C;--brown-light:#6D554D;--sage:#D6E1DE;--line:rgba(43,18,14,.24)}
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:Georgia,"Times New Roman",serif;position:relative;isolation:isolate;overflow-x:hidden}
+a{color:inherit}
+
+.craft{position:absolute;z-index:0;pointer-events:none;user-select:none;height:auto}
+.craft-1{width:747px;top:650px;left:-455px}
+.craft-2{width:449px;right:-190px;top:1650px}
+.craft-4{width:673px;top:-340px;left:150px}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 2%;gap:20px;position:relative;z-index:5}
+.logo{display:flex;align-items:center;flex-shrink:0;text-decoration:none}
+.logo img{display:block;width:auto;height:auto;max-width:386.5224px;max-height:136.89335px;object-fit:contain}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:20px 25px;background:var(--brown)}
+nav a{color:var(--cream);text-decoration:none;font:16px Arial,sans-serif}
+nav a:hover,nav a:focus-visible{color:var(--sage)}
+
+main{width:100%;padding:18px 5% 70px;position:relative;z-index:1}
+.article-shell{width:100%;max-width:1500px;margin:0 auto}
+
+.article-topline{display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--brown);color:var(--sage);border:1px solid var(--brown);padding:12px 16px;margin-bottom:32px;font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase}
+.article-topline span:last-child{text-align:right}
+
+.hero{margin-bottom:58px}
+.hero-title{max-width:1100px;margin:0 auto 26px;text-align:center}
+.hero-title h1{font-size:clamp(42px,6.5vw,84px);font-weight:normal;line-height:1.02;letter-spacing:-2px;margin:0}
+.title-rule{width:95px;height:5px;background:var(--brown);margin:25px auto 0}
+.hero-image{width:100%;height:clamp(250px,43vw,570px);display:block;object-fit:cover;background:var(--sage)}
+.image-caption{font:11px/1.5 Arial,sans-serif;color:var(--brown-soft);margin-top:8px;text-align:right}
+
+.section{margin:0 0 56px;position:relative}
+.section-heading{margin-bottom:22px}
+.section-kicker{display:flex;align-items:center;gap:12px;font:bold 11px Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px}
+.section-kicker:before{content:"";width:35px;height:2px;background:var(--brown);flex-shrink:0}
+.section h2{font-size:clamp(30px,4vw,48px);font-weight:normal;line-height:1.08;letter-spacing:-.8px;margin:0}
+.section-copy{font-size:17px;line-height:1.75;text-align:justify;min-width:0}
+.section-copy p{margin:0 0 16px}
+.section-copy p:last-child{margin-bottom:0}
+
+/* ANTROPOLOGÍA: altura fija para evitar que la imagen sea demasiado larga */
+.identity-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:start;
+}
+.identity-copy{min-width:0}
+.identity-layout .section-copy{max-width:100%}
+.identity-layout > .image-placeholder{
+  display:block;
+  width:100%;
+  height:380px;
+  max-height:380px;
+  min-height:0;
+  align-self:start;
+  object-fit:cover;
+  object-position:center;
+  border:1px solid var(--line);
+}
+
+.economy{padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.economy-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;align-items:start}
+.economy-left{min-width:0}
+.economy .section-heading{margin-bottom:20px}
+
+/* ECONOMÍA: imagen más corta y recortada */
+.economy-placeholder{
+  display:block;
+  width:100%;
+  height:350px;
+  max-height:350px;
+  object-fit:cover;
+  object-position:center top;
+  margin-top:0;
+}
+.economy-copy p{margin-bottom:17px}
+
+.security{padding-top:4px}
+.security-layout{display:grid;grid-template-columns:3fr 1fr;gap:38px;align-items:center}
+.security-left{min-width:0}
+.security .section-copy{max-width:none}
+.security-placeholder{aspect-ratio:3/4}
+
+.history{padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.history-layout{display:grid;grid-template-columns:1fr 3fr;gap:38px;align-items:center}
+.history-placeholder{aspect-ratio:3/4}
+.history-content{min-width:0}
+.history .section-copy{max-width:none}
+
+.opinion{padding-top:4px}
+.opinion .section-copy{max-width:none;width:100%}
+
+.quote-box{margin-top:24px;padding:22px 25px;background:var(--sage);border-left:3px solid var(--brown)}
+.quote-box p{margin:0 0 14px;font-size:18px;line-height:1.65}
+.quote-box p:last-child{margin-bottom:0}
+
+.endmatter{border-top:2px solid var(--brown);padding-top:28px}
+.authors{
+  display:block;
+  padding:22px 0 26px;
+  border-bottom:1px solid var(--line);
+}
+.authors-list{font-size:16px;line-height:1.7;margin:0}
+.image-credit{font-size:13px;line-height:1.6;color:var(--brown-soft);padding:17px 0 25px;border-bottom:1px solid var(--line)}
+
+.bibliography{padding-top:28px}
+.bibliography h2{margin-bottom:20px}
+.bibliography ol{padding-left:22px;margin:0}
+.bibliography li{font:12px/1.7 Arial,sans-serif;overflow-wrap:anywhere;margin-bottom:11px}
+.bibliography a{color:var(--brown-soft);text-decoration-thickness:1px;text-underline-offset:3px}
+.bibliography a:hover{color:var(--brown)}
+
+.back-to-top{display:inline-block;margin-top:32px;padding:13px 18px;background:var(--brown);color:var(--cream);text-decoration:none;font:11px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
+.back-to-top:hover{background:var(--brown-soft)}
+
+@media(max-width:1000px){
+  main{padding-left:4%;padding-right:4%}
+}
+
+@media(max-width:750px){
+  .craft-1{width:467px;left:-400px;top:600px}
+  .craft-2{width:330px;right:-190px;top:1600px}
+  .craft-4{width:390px;top:-220px;left:-50px}
+
+  header{flex-direction:column;align-items:flex-start}
+  nav{width:100%;gap:14px;padding:15px 12px}
+  nav a{font-size:14px}
+
+  main{padding-top:8px;padding-bottom:50px}
+  .article-topline{font-size:9px;letter-spacing:1px;margin-bottom:24px}
+  .hero{margin-bottom:44px}
+  .hero-title h1{letter-spacing:-1.3px}
+  .hero-image{height:320px}
+  .section{margin-bottom:44px}
+
+  .identity-layout,.economy-layout,.security-layout,.history-layout{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  /* ANTROPOLOGÍA EN MÓVIL: altura fija y recorte */
+  .identity-layout > .image-placeholder{
+    width:100%;
+    height:250px;
+    max-height:250px;
+    min-height:0;
+    align-self:start;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  .economy .section-heading{margin-bottom:0}
+  .economy-left{display:block}
+
+  /* ECONOMÍA EN MÓVIL */
+  .economy-placeholder{
+    width:100%;
+    height:280px;
+    max-height:280px;
+    aspect-ratio:auto;
+    object-fit:cover;
+    object-position:center top;
+    margin-top:20px;
+  }
+
+  .security-placeholder,.history-placeholder{aspect-ratio:4/3}
+}
+
+@media(max-width:480px){
+  .craft-4{width:300px;top:-150px;left:-35px}
+
+  .logo{max-width:100%}
+  .logo img{max-width:100%;max-height:115px}
+  nav{gap:5px;padding:12px 5px}
+  nav a{font-size:12px;padding:8px 7px}
+
+  .hero-title h1{font-size:39px}
+  .hero-image{height:250px}
+  .section-copy{font-size:16px;line-height:1.75}
+  .section h2{font-size:31px}
+  .bibliography li{font-size:11px}
+  .image-placeholder{max-width:100%}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+
+<body id="top">
+
+<img class="craft craft-1" src="../images/craft1.png" alt="" aria-hidden="true">
+<img class="craft craft-2" src="../images/craft2.png" alt="" aria-hidden="true">
+<img class="craft craft-4" src="../images/craft4.png" alt="" aria-hidden="true">
+
+<header>
+  <a class="logo" href="../index.html">
+    <img src="../logo.png" alt="Punto Cieco logo">
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="../index.html">Inicio</a>
+    <a href="../nosotros.html">Nosotros</a>
+    <a href="../articulos.html">Artículos</a>
+    <a href="../ayuda.html">Ayuda a los necesitados</a>
+  </nav>
+</header>
+
+<main>
+<article class="article-shell">
+
+  <div class="article-topline">
+    <span>Punto Cieco · Una plana</span>
+    <span>Política · América</span>
+  </div>
+
+  <section class="hero">
+    <div class="hero-title">
+      <h1>¿Qué lugar ocuparán los Escudos de las Américas Unidas internacionalmente?</h1>
+      <div class="title-rule"></div>
+    </div>
+
+    <img
+      class="hero-image"
+      src="https://politica328.wordpress.com/wp-content/uploads/2026/09/chatgpt-image-11-sept-2026-05_53_57-p.m.png?w=1024"
+      alt="Imagen de portada sobre los Escudos de las Américas Unidas"
+    >
+
+    <div class="image-caption">Los Escudos de las Américas Unidas y el futuro de la cooperación regional.</div>
+  </section>
+
+  <section class="section identity-layout" id="antropologia">
+    <div class="identity-copy">
+      <div class="section-heading">
+        <div class="section-kicker">01 · Antropología</div>
+        <h2>Antropología</h2>
+      </div>
+
+      <div class="section-copy">
+        <p>¿Qué significa ser latinoamericano? No es como ser “europeo”, una etiqueta más política que cultural, ni como ser “asiático”, que agrupa realidades enormemente distintas entre sí. Lo latino nace de otra mezcla: la lengua, la historia de la colonización hispano-portuguesa y el mestizaje que corre por nuestras venas.</p>
+
+        <p>Pero esta identidad no surgió de la nada. Se construyó durante siglos de encuentros, conflictos y mezclas entre pueblos que hoy forman parte de una misma historia. Es precisamente esta idea de una identidad compartida la que vuelve relevante la creación de los <strong>Escudos de las Américas Unidas</strong>: si buscamos unir políticamente al continente, primero debemos preguntarnos qué nos une culturalmente. ¿Podemos construir una identidad común sin dejar de lado todo aquello que nos hace diferentes?</p>
+      </div>
+    </div>
+
+    <img class="image-placeholder" src="../images/articulo-4-antropologia.png" alt="Imagen sobre antropología e identidad latinoamericana" loading="lazy">
+  </section>
+
+  <section class="section economy" id="economia">
+    <div class="economy-layout">
+      <div class="economy-left">
+        <div class="section-heading">
+          <div class="section-kicker">02 · Economía</div>
+          <h2>¿Llegaremos al nivel de EUROPA o ASEAN?</h2>
+        </div>
+
+        <img class="image-placeholder economy-placeholder" src="../images/articulo-4-economia.png" alt="Imagen sobre economía y cooperación regional" loading="lazy">
+      </div>
+
+      <div class="section-copy economy-copy">
+        <p>La economía de la Alianza del Escudo de las Américas plantea un reto muy común, a diferencia de lo que ocurre en los demás continentes, ya que involucra a países con diferentes etapas de desarrollo. Esto genera mucha duda sobre si estas diferencias pudieran limitar su habilidad para competir contra Europa y Asia.</p>
+
+        <p>De acuerdo con el Banco Mundial (2026), América Latina debería aumentar su productividad, optimizar sus inversiones y reforzar sus instituciones para lograr un crecimiento continuo. De la misma manera, la colaboración económica entre las naciones puede llegar a facilitar el comercio y además crearía más oportunidades de progreso. No obstante, para poder competir con Europa o Asia se necesitan cambios estructurales y un esfuerzo conjunto a largo plazo.</p>
+
+        <p>La colaboración económica en América Latina podría mejorar la situación acerca de la diferencia económica que tenemos ante Europa y Asia, pero las variaciones entre los países son un gran obstáculo. Si bien la colaboración facilita un mejor uso de los recursos y la expansión de mercados, alcanzar una competencia similar requeriría un avance en la economía de cada país y una cooperación continua en el tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section security" id="gobierno">
+    <div class="security-layout">
+      <div class="security-left">
+        <div class="section-heading">
+          <div class="section-kicker">03 · Gobierno</div>
+          <h2>¿Podrán los gobiernos ponerse de acuerdo?</h2>
+        </div>
+
+        <div class="section-copy">
+          <p>La Alianza del Escudo de las Américas, en la lucha contra el narcotráfico y el crimen organizado, puede considerarse un acuerdo transversal, ya que reúne a Estados con diferentes sistemas políticos en torno a un objetivo común. La Carta de la OEA reconoce el derecho de cada Estado a determinar sus sistemas políticos, económicos y sociales. Esto plantea la duda de si esas diferencias podrían obstaculizar el objetivo principal.</p>
+
+          <p>La actual presidenta del Perú, Keiko Fujimori, ha anunciado su voluntad de integrar al país a esta iniciativa para combatir la inseguridad ciudadana y la corrupción. Sin embargo, Perú podría enfrentarse a diferencias en las políticas de drogas de los países miembros. Mientras Canadá legalizó el cannabis recreativo en 2018, el Perú, como productor de hoja de coca, mantiene políticas orientadas a la erradicación de cultivos ilegales y de interdicción del narcotráfico.</p>
+        </div>
+      </div>
+
+      <img class="image-placeholder security-placeholder" src="../images/articulo-4-gobierno.png" alt="Imagen sobre gobierno y seguridad regional" loading="lazy">
+    </div>
+  </section>
+
+  <section class="section history" id="historia">
+    <div class="history-layout">
+      <img class="image-placeholder history-placeholder" src="../images/articulo-4-historia.png" alt="Imagen sobre historia política y legado europeo en América" loading="lazy">
+
+      <div class="history-content">
+        <div class="section-heading">
+          <div class="section-kicker">04 · Historia</div>
+          <h2>¿Puede el legado histórico de Europa jugar en contra de Escudos de las Américas?</h2>
+        </div>
+
+        <div class="section-copy">
+          <p>En los Escudos de las Américas existe una brecha que se debe, en parte, a la influencia que Europa dejó en el continente al colonizar diversos países. Por esto, se puede notar que los diferentes gobiernos del continente tienen distintos estilos, culturas e ideales. Esto se debe a que los países que colonizaron el continente establecieron sus propias formas de organización política, económica y social, lo que provocó que los países de los Escudos de las Américas se desarrollaran de manera diversa.</p>
+
+          <p>A su vez, esta diversidad provoca que la toma de decisiones en conjunto con todos los miembros sea mucho más difícil debido a la brecha existente que divide a los diversos gobiernos en el continente americano. En cambio, en la Unión Europea, tienen una mayor facilidad de crecer en las mismas condiciones, esto debido a que países como Francia, Inglaterra, España, Alemania y Portugal poseen un desarrollo bastante igualado y esto les beneficiaría en la toma de decisiones que mejoren a beneficio de toda la organización de la Unión Europea.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section opinion" id="opinion">
+    <div class="section-heading">
+      <div class="section-kicker">05 · Voces jóvenes</div>
+      <h2>Opinión joven</h2>
+    </div>
+
+    <div class="section-copy">
+      <p>La iniciativa del Escudo de las Américas genera un paradigma que impacta a escala local y continental. Los jóvenes entrevistados (13-17 años) se dividen en dos facciones, aquellos optimistas y aquellos escépticos.</p>
+
+      <p>Ambos grupos concuerdan en cómo, en papel, la organización tendría un impacto positivo en las comunidades afectadas por el narcotráfico y el crimen organizado, pero también ven cómo esta solución es mejor a mediano y corto plazo, pues no resuelve el problema desde la raíz. Aquellos con visión más optimista creen que lo prometido será lo dado, y que se mantendrá un balance y un constante compartimiento de ideas para llegar a soluciones.</p>
+
+      <div class="quote-box">
+        <p>Aquellos escépticos, en cambio, creen que EE.UU., liderados por Donald Trump, concentrará el poder al aportar el brazo militar. Asimismo, encontramos escepticismo en el uso de militares en operaciones contra el crimen, al ver el riesgo de la pérdida de libertad y la militarización de la policía a causa de esto, viéndose reforzado por el hecho de que son militares extranjeros que pueden buscar el beneficio de Washington sobre el nacional.</p>
+
+        <p>Finalmente, nos encontramos con un grupo reducido que teoriza cómo la formación de una organización de apoyo militar de tal escala, a pesar de no estar hecha con este fin, puede generar mayores conflictos entre otras naciones.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="endmatter">
+    <section class="authors">
+      <p class="authors-list"><strong>Escritores:</strong> Ambra Lecca, Gianluca Oneto, Domenica Valverde, Diego Liendo y Luis Gabriel Melendez.</p>
+    </section>
+
+    <div class="image-credit">Imágenes generadas con ChatGPT y Gemini.</div>
+
+    <section class="bibliography" id="bibliografia">
+      <h2>Bibliografía</h2>
+
+      <ol>
+        <li>El Café Latino. (s. f.). <em>Identidad latinoamericana.</em> <a href="https://elcafelatino.org/es/identidad-latino-americano/" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Navia Meyer, F. (2010, 17 de febrero). <em>Descolonización del Jamuña.</em> Foroalfa. <a href="https://foroalfa.org/articulos/descolonizacion-del-jamuna" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Maloney, W. F., Vuletin, G. J., &amp; Zambrano, A. (2026, 8 de abril). <em>Latin America and Caribbean Economic Update, April 2026: Revisiting Industrial Policy—Strategic Options for Today.</em> World Bank Group. <a href="https://documents.worldbank.org/en/publication/documents-reports/documentdetail/099040726171531340" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Moreau, F., &amp; Parente, R. M. (2023, 16 de noviembre). <em>How Latin America can use trade to boost growth.</em> International Monetary Fund. <a href="https://www.imf.org/en/blogs/articles/2023/11/16/how-latin-america-can-use-trade-to-boost-growth" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>OECD, ECLAC, CAF, &amp; European Commission. (2025, 7 de noviembre). <em>Latin American Economic Outlook 2025: Promoting and Financing Production Transformation.</em> OECD Publishing.</li>
+        <li>Inter-American Development Bank. (s. f.). <em>IDB report argues that greater integration is critical for development in Latin America and Caribbean.</em> <a href="https://www.iadb.org/en/news/idb-report-argues-greater-integration-critical-development-latin-america-and-caribbean" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>BBC News Mundo. (s. f.). <em>Qué es el Escudo de las Américas, la iniciativa impulsada por Trump en la que nace la nueva coalición militar regional contra los carteles de la droga.</em> <a href="https://www.bbc.com/mundo/articles/cjrq9j55wnwo" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Organización de los Estados Americanos. (1948). <em>Carta de la Organización de los Estados Americanos.</em> <a href="https://hrlibrary.umn.edu/oasinstr/Scharter.html" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Refworld. (s. f.). <em>Perú consolida agenda internacional contra el narcotráfico en reuniones bilaterales de la CND.</em></li>
+        <li>Organización de los Estados Americanos. (1948). <em>Carta de la Organización de los Estados Americanos</em> [PDF]. Referencia incluida en el documento original; no se ha añadido un enlace para evitar atribuir una edición no identificada.</li>
+        <li>El Peruano. (2026, 8 de agosto). <em>Perú y el Escudo de las Américas.</em> <a href="https://www.elperuano.pe/noticia/302045-peru-y-el-escudo-de-las-americas" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>France 24. (2026, 3 de agosto). <em>Perú anuncia su próxima incorporación a Escudo de las Américas promovido por EE. UU.</em> Referencia incluida en el documento original; el enlace disponible estaba incompleto.</li>
+        <li>EFE. (2023, 10 de octubre). <em>La legalización de la marihuana en Canadá se vincula a un alza de los problemas de salud.</em> SWI swissinfo.ch. <a href="https://www.swissinfo.ch/spa/la-legalizaci%C3%B3n-de-la-marihuana-en-canad%C3%A1-se-vincula-a-un-alza-de-los-problemas-de-salud/48878950" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Veldman, M. (2021, 11 de febrero). <em>Marihuana en Canadá: Leyes, uso e historia.</em> Sensi Seeds. Referencia incluida en el documento original.</li>
+        <li>Engerman, S. L., &amp; Sokoloff, K. L. (2001). <em>Inequality, institutions, and differential paths of growth among new world economies.</em> Referencia incluida en el documento original, con una discrepancia bibliográfica señalada en el material recibido.</li>
+        <li>Organización de los Estados Americanos. (s. f.). <em>Nuestra historia.</em> <a href="https://www.oas.org/es/acerca/nuestra_historia.asp" target="_blank" rel="noopener noreferrer">Leer fuente.</a></li>
+        <li>Deutsche Welle. (2026, 1 de agosto). <em>Perú decidido a sumarse al Escudo de las Américas de Trump.</em> Referencia incluida en el documento original.</li>
+      </ol>
+    </section>
+
+    <a class="back-to-top" href="#top">↑ Volver al inicio</a>
+  </footer>
+
+</article>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo la guerra de Irán nos afecta | Punto Ciego</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #F7F2EC;
+            --brown: #2B120E;
+            --brown-soft: #59433C;
+            --brown-light: #6D554D;
+            --sage: #D6E1DE;
+            --line: rgba(43, 18, 14, 0.24);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--brown);
+            font-family: Georgia, "Times New Roman", serif;
+            position: relative;
+            isolation: isolate;
+            overflow-x: hidden;
+        }
+
+        /* Craft-paper decorations */
+        .craft {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+            height: auto;
+        }
+
+        .craft-1 {
+            width: 747.1404px;
+            top: 720px;
+            left: -455px;
+        }
+
+        .craft-2 {
+            width: 449px;
+            right: -190px;
+            top: 1950px;
+        }
+
+        .craft-4 {
+            width: 673px;
+            top: -340px;
+            left: 150px;
+            right: auto;
+        }
+
+        /* HEADER — matching index.html */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 2%;
+            gap: 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 386.5224px;
+            max-height: 136.89335px;
+            object-fit: contain;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            padding: 20px 25px;
+            background-color: var(--brown);
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--sage);
+        }
+
+        /* MAIN ARTICLE */
+        main {
+            width: 100%;
+            padding: 18px 5% 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-shell {
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .article-topline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            background-color: #2B120E;
+            color: #D6E1DE;
+            border: 1px solid #2B120E;
+            padding: 12px 16px;
+            margin-bottom: 32px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .article-topline span:last-child {
+            text-align: right;
+        }
+
+        .hero {
+            margin-bottom: 74px;
+        }
+
+        .hero-title {
+            max-width: 1100px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .hero-title h1 {
+            font-size: clamp(44px, 7vw, 94px);
+            font-weight: normal;
+            line-height: 0.98;
+            letter-spacing: -2.5px;
+            margin: 0;
+        }
+
+        .hero-title .title-rule {
+            width: 95px;
+            height: 5px;
+            background: var(--brown);
+            margin: 28px auto 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: clamp(280px, 49vw, 650px);
+            display: block;
+            object-fit: cover;
+            background: var(--sage);
+        }
+
+        .image-caption {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--brown-soft);
+            margin-top: 9px;
+            text-align: right;
+        }
+
+        /* SECTION LABELS */
+        .section {
+            margin: 0 0 100px;
+            position: relative;
+        }
+
+        .section-kicker {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-kicker::before {
+            content: "";
+            width: 35px;
+            height: 2px;
+            background: var(--brown);
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-size: clamp(34px, 4.3vw, 58px);
+            font-weight: normal;
+            line-height: 1.04;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        .section-copy {
+            font-size: 17px;
+            line-height: 1.85;
+            text-align: justify;
+            min-width: 0;
+        }
+
+        .section-copy p {
+            margin: 0 0 19px;
+        }
+
+        .section-copy p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-copy sup {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+        }
+
+        .section-image {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            background: var(--sage);
+        }
+
+        .tape {
+            position: absolute;
+            width: 78px;
+            height: 20px;
+            background: rgba(214, 225, 222, 0.88);
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-4deg);
+            z-index: 2;
+        }
+
+        .image-frame {
+            position: relative;
+            min-width: 0;
+        }
+
+        .image-frame .section-image {
+            position: relative;
+        }
+
+        /* 01 — ANTHROPOLOGY */
+        .anthropology {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: clamp(28px, 5vw, 75px);
+            align-items: center;
+        }
+
+        .anthropology .section-heading {
+            margin-bottom: 26px;
+        }
+
+        .anthropology .section-image {
+            aspect-ratio: 0.82 / 1;
+            max-height: 700px;
+        }
+
+        .anthropology .image-frame {
+            padding: 14px 0 0 14px;
+        }
+
+        .anthropology .image-frame::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 65%;
+            height: 60%;
+            border: 1px solid var(--brown);
+            z-index: -1;
+        }
+
+        /* 02 — ECONOMY */
+        .economy {
+            padding: 52px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .economy .economy-heading {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 36px;
+            align-items: end;
+            margin-bottom: 30px;
+        }
+
+        .economy .section-image {
+            aspect-ratio: 2.15 / 1;
+            max-height: 540px;
+        }
+
+        .economy .economy-copy {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 27px;
+        }
+
+        /* 03 — GOVERNMENT */
+        .government {
+            display: grid;
+            grid-template-columns: 0.8fr 1.1fr 0.85fr;
+            gap: clamp(22px, 3.5vw, 48px);
+            align-items: start;
+        }
+
+        .government .section-heading {
+            position: sticky;
+            top: 24px;
+        }
+
+        .government .section-image {
+            aspect-ratio: 0.8 / 1;
+            margin-top: 44px;
+        }
+
+        .government .tape {
+            left: 25%;
+        }
+
+        /* 04 — HISTORY */
+        .history {
+            background: var(--sage);
+            padding: clamp(28px, 5vw, 68px);
+            margin-left: -2%;
+            margin-right: -2%;
+        }
+
+        .history .history-heading {
+            max-width: 1000px;
+            margin-bottom: 36px;
+        }
+
+        .history .history-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: clamp(28px, 5vw, 72px);
+            align-items: stretch;
+        }
+
+        /* The history image stretches to match the full text height */
+        .history .section-image {
+            height: 100%;
+            min-height: 100%;
+            aspect-ratio: auto;
+            max-height: none;
+        }
+
+        .history .image-frame {
+            margin-top: 8px;
+            display: flex;
+            align-self: stretch;
+        }
+
+        .history .image-frame::after {
+            content: "";
+            position: absolute;
+            width: 48%;
+            height: 24%;
+            border: 1px solid var(--brown);
+            right: -12px;
+            bottom: -12px;
+            z-index: -1;
+        }
+
+        /* 05 — YOUTH OPINION */
+        .opinion {
+            display: block;
+        }
+
+        .opinion .section-heading {
+            margin-bottom: 24px;
+        }
+
+        /* AUTHORS, IMAGE CREDIT AND BIBLIOGRAPHY */
+        .endmatter {
+            border-top: 2px solid var(--brown);
+            padding-top: 38px;
+        }
+
+        .authors {
+            display: block;
+            padding: 25px 0 32px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .endmatter h2 {
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: normal;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .authors-list {
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .image-credit {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #59433C;
+            padding: 20px 0 30px;
+            border-bottom: 1px solid rgba(43, 18, 14, 0.24);
+        }
+
+        .bibliography {
+            padding-top: 32px;
+        }
+
+        .bibliography h2 {
+            margin-bottom: 25px;
+        }
+
+        .bibliography ol {
+            padding-left: 22px;
+            margin: 0;
+        }
+
+        .bibliography li {
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-wrap: anywhere;
+            margin-bottom: 13px;
+        }
+
+        .bibliography a {
+            color: var(--brown-soft);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .bibliography a:hover {
+            color: var(--brown);
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 45px;
+            padding: 13px 19px;
+            background: var(--brown);
+            color: var(--cream);
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .back-to-top:hover {
+            background: var(--brown-soft);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1000px) {
+            main {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .anthropology {
+                grid-template-columns: 0.95fr 1.05fr;
+                gap: 30px;
+            }
+
+            .government {
+                grid-template-columns: 0.8fr 1.2fr;
+            }
+
+            .government .section-image {
+                grid-column: 2;
+                margin-top: 0;
+                max-height: 420px;
+                aspect-ratio: 1.5 / 1;
+            }
+
+            .government .section-heading {
+                position: static;
+            }
+
+            .government .section-copy {
+                grid-column: 1 / -1;
+            }
+
+            .history {
+                margin-left: -1%;
+                margin-right: -1%;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .craft-1 {
+                width: 466.96284px;
+                left: -400px;
+                top: 650px;
+            }
+
+            .craft-2 {
+                width: 390px;
+                right: -190px;
+                top: 1800px;
+            }
+
+            .craft-4 {
+                width: 390px;
+                top: -220px;
+                left: -50px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                gap: 14px;
+                padding: 16px 12px;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            main {
+                padding-top: 8px;
+                padding-bottom: 55px;
+            }
+
+            .article-topline {
+                font-size: 9px;
+                letter-spacing: 1.3px;
+                margin-bottom: 25px;
+            }
+
+            .hero {
+                margin-bottom: 55px;
+            }
+
+            .hero-title h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-image {
+                height: 340px;
+            }
+
+            .section {
+                margin-bottom: 68px;
+            }
+
+            .anthropology,
+            .economy .economy-heading,
+            .history .history-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .anthropology .image-frame {
+                max-width: 560px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .anthropology .section-image {
+                aspect-ratio: 1.25 / 1;
+            }
+
+            .economy {
+                padding: 34px 0;
+            }
+
+            .economy .economy-heading {
+                gap: 18px;
+            }
+
+            .economy .section-image {
+                aspect-ratio: 1.35 / 1;
+            }
+
+            .economy .economy-copy {
+                grid-template-columns: 1fr;
+                gap: 19px;
+            }
+
+            .government {
+                grid-template-columns: 1fr;
+            }
+
+            .government .section-image {
+                grid-column: auto;
+                width: 100%;
+                max-height: 440px;
+                aspect-ratio: 1.4 / 1;
+                margin-top: 0;
+            }
+
+            .government .section-copy {
+                grid-column: auto;
+            }
+
+            .history {
+                padding: 30px 22px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .history .history-grid {
+                gap: 28px;
+            }
+
+            .history .section-image {
+                height: auto;
+                min-height: 0;
+                aspect-ratio: 1.2 / 1;
+            }
+
+            .authors {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .craft-4 {
+                width: 300px;
+                top: -150px;
+                left: -35px;
+            }
+
+            .hero-title h1 {
+                font-size: 43px;
+            }
+
+            .hero-image {
+                height: 260px;
+            }
+
+            .section-copy {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .bibliography li {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Craft-paper decorations shared with the homepage -->
+    <img class="craft craft-1"
+         src="../images/craft1.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-2"
+         src="../images/craft2.png"
+         alt=""
+         aria-hidden="true">
+
+    <img class="craft craft-4"
+         src="../images/craft4.png"
+         alt=""
+         aria-hidden="true">
+
+    <!-- Shared Punto Ciego header -->
+    <header>
+        <a class="logo" href="../index.html">
+            <img src="../logo.png" alt="Punto Ciego logo">
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <a href="../index.html">Inicio</a>
+            <a href="../nosotros.html">Nosotros</a>
+            <a href="../articulos.html">Artículos</a>
+            <a href="../ayuda.html">Ayuda a los necesitados</a>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-shell">
+
+            <div class="article-topline">
+                <span>Punto Ciego · Plana de periódico</span>
+                <span>Política · Medio Oriente</span>
+            </div>
+
+            <!-- MAIN TITLE AND HERO IMAGE -->
+            <section class="hero">
+                <div class="hero-title">
+                    <h1>Cómo la guerra de Irán nos afecta</h1>
+                    <div class="title-rule"></div>
+                </div>
+
+                <img class="hero-image"
+                     src="../images/articulo-1-portada.png"
+                     alt="Imagen principal del artículo sobre la guerra de Irán">
+
+                <div class="image-caption">
+                    Una mirada a los efectos de la guerra más allá de sus fronteras.
+                </div>
+            </section>
+
+            <!-- 01 · ANTHROPOLOGY -->
+            <section class="section anthropology" id="antropologia">
+                <div class="section-content">
+                    <div class="section-heading">
+                        <div class="section-kicker">01 · Antropología</div>
+                        <h2>¿Qué vemos cuando pensamos en Irán?</h2>
+                    </div>
+
+                    <div class="section-copy">
+                        <p>“Como no nos afecta esta guerra, ignoramos su existencia y solo la notamos cuando la gasolina sube, y eso sí es que tienes carro.” Eso es lo que piensan millones de peruanos.</p>
+
+                        <p>Esa es la única perspectiva que tenemos por la falta de una visión más completa en las noticias, que solo muestra la perspectiva “gringa” del conflicto, ignorando a las personas que están sufriendo debido a la guerra para centrarse en el próximo escándalo de Trump y los cambios de precios.<sup>1</sup></p>
+
+                        <p>Además, nuestro gobierno también se ha distanciado del conflicto, simplemente tratando de ayudar a los peruanos que se han quedado en medio de la guerra, y haciéndolo desde Turquía porque no tiene embajada en Irán.<sup>2</sup> Después de un par de entrevistas recibimos resultados mixtos.</p>
+
+                        <p>La mayoría de entrevistados que decían conocer bien el conflicto lo consideraron una guerra inútil, mientras quienes no sabían mucho solo sabían que EE. UU. está involucrado, y les preocupa una posible tercera guerra mundial.</p>
+                    </div>
+                </div>
+
+                <div class="image-frame">
+                    <span class="tape" aria-hidden="true"></span>
+                    <img class="section-image"
+                         src="../images/articulo-1-antropologia.png"
+                         alt="Imagen editorial para la sección de antropología"
+                         loading="lazy">
+                    <div class="image-caption">La percepción de un conflicto también depende de cómo se cuenta.</div>
+                </div>
+            </section>
+
+            <!-- 02 · ECONOMY -->
+            <section class="section economy" id="economia">
+                <div class="economy-heading">
+                    <div>
+                        <div class="section-kicker">02 · Economía</div>
+                        <h2>La guerra en nuestros bolsillos</h2>
+                    </div>
+
+                    <div class="section-copy">
+                        <p>Aunque el conflicto en Medio Oriente se encuentre geográficamente alejado, económicamente está chocando directamente con nuestra realidad, aumentando los precios a nivel global y afectando a nuestros bolsillos.</p>
+
+                        <p>Puede que no nos hayamos dado cuenta, pero el aumento del petróleo y la inflación de diversos productos están produciendo gastos que podrían darnos graves problemas a futuro.</p>
+                    </div>
+                </div>
+
+                <div class="image-frame">
+                    <span class="tape" aria-hidden="true"></span>
+                    <img class="section-image"
+                         src="../images/articulo-1-economia.png"
+                         alt="Imagen editorial sobre el impacto económico de la guerra"
+                         loading="lazy">
+                </div>
+
+                <div class="economy-copy section-copy">
+                    <div>
+                        <p>Como ya sabemos, una de las principales problemáticas es definitivamente el petróleo, que aumentó su precio un 45%, en algunos casos llegando hasta los 120 dólares por barril. Esto puede no preocupar a muchos al momento de rellenar nuestros tanques, pero aumenta significativamente los precios del transporte público, afectando directamente a muchos.</p>
+                    </div>
+
+                    <div>
+                        <p>Por otro lado, la inflación que se produce en la importación de alimentos, minerales, etc., se debe al cierre del estrecho de Ormuz, que está ocasionando diversos gastos en nuestro presupuesto mensual que previamente ya estaba calculado.</p>
+
+                        <p>Como hemos visto, la guerra en Irán no solo afecta a una pequeña parte del mundo, sino a todo el planeta, incluyéndonos, que somos perjudicados por el aumento de precios y de inflación.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03 · GOVERNMENT -->
+            <section class="section government" id="gobierno">
+                <div class="section-heading">
+                    <div class="section-kicker">03 · Gobierno</div>
+                    <h2>¿De qué lado estamos?</h2>
+                </div>
+
+                <div class="section-copy">
+                    <p>Aunque el conflicto en Medio Oriente ocurra al otro lado del mundo, tiene efectos en nuestro país y el gobierno peruano está actuando.</p>
+
+                    <p>Frente a esta situación, el Perú ha decidido no ponerse a favor de ningún ejército ni apoyar la guerra. En lugar de esto, defiende la paz y pide que los países resuelvan sus problemas a través del diálogo.</p>
+
+                    <p>Hoy en día, el Estado tiene dos metas muy claras: la primera es proteger y rescatar a los ciudadanos peruanos que están cerca de la zona de peligro, y la segunda es controlar la economía para que el aumento del precio del petróleo, el aumento del dólar y la inflación afecten lo menos posible los bolsillos de las familias.</p>
+                </div>
+
+                <div class="image-frame">
+                    <span class="tape" aria-hidden="true"></span>
+                    <img class="section-image"
+                         src="../images/articulo-1-gobierno.png"
+                         alt="Imagen editorial sobre la respuesta del gobierno peruano"
+                         loading="lazy">
+                </div>
+            </section>
+
+            <!-- 04 · HISTORY -->
+            <section class="section history" id="historia">
+                <div class="history-heading">
+                    <div class="section-kicker">04 · Historia</div>
+                    <h2>¿Cómo llegamos hasta aquí?</h2>
+                </div>
+
+                <div class="history-grid">
+                    <div class="image-frame">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img class="section-image"
+                             src="../images/articulo-1-historia.png"
+                             alt="Imagen editorial para contextualizar la historia del conflicto"
+                             loading="lazy">
+                    </div>
+
+                    <div class="section-copy">
+                        <p>La rivalidad que llevó a la guerra actual entre Irán, Estados Unidos e Israel comienza desde la Revolución Islámica de 1979. Antes, Irán era un reino aliado de Estados Unidos e Israel, pero cuando el ayatolá Jomeini llegó al poder, el país se convirtió en una república islámica que rechazaba el supuesto imperialismo estadounidense y, a su vez, rompió relaciones con Israel.</p>
+
+                        <p>Irán comenzó a apoyar la causa palestina y desarrolló un programa nuclear que Israel considera una amenaza porque se podrían estar produciendo armas nucleares. Esta rivalidad se incrementó con la supuesta “guerra en la sombra”, que trataba de ataques encubiertos, y el conflicto en Siria desde 2011.</p>
+
+                        <p>Hace no mucho, el 28 de febrero de este año, Estados Unidos e Israel lanzaron un ataque en conjunto contra Irán, desatando la guerra que hoy todos conocemos, afectando a alrededor de 16 países, incluyéndonos.</p>
+
+                        <p>Todos hemos oído hablar de la guerra en Medio Oriente. Pero, aunque el mundo sea pequeño, se siente muy lejana a nosotros. Entonces, ¿qué es lo que nosotros, adolescentes peruanos, pensamos sobre ella? Haciendo entrevistas, nos dimos cuenta de que no se trataba de una cuestión de desinterés o chiste, ya que siempre existirá gente que lo tome a broma o que lo use solo para hacer números en redes. Pero, en el fondo, a todos les preocupa.</p>
+
+                        <p>Si nos ponemos en el lugar de adolescentes de nuestra edad, atrapados en estas situaciones, nos damos cuenta de lo afortunados que somos. Obvio, nos asusta que esto llegue a pasarnos, o que el conflicto escale, y esperamos que nunca nos suceda. Entonces, mentiríamos al decir que no sentimos este conflicto distante, pero también mentiríamos diciendo que no nos preocupa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 · YOUTH OPINION -->
+            <section class="section opinion" id="opinion">
+                <div class="opinion-content">
+                    <div class="section-heading">
+                        <div class="section-kicker">05 · Opinión joven</div>
+                        <h2>Entre scrolls, noticias y memes</h2>
+                    </div>
+
+                    <div class="section-copy">
+                        <p>La guerra entre Irán, Israel y la coalición liderada por Estados Unidos ha generado opiniones divididas entre jóvenes de distintos países, especialmente en Perú y Estados Unidos. En Perú, muchos jóvenes rechazan la violencia y piden soluciones diplomáticas, preocupados por el impacto económico y social que podría provocar una guerra más amplia. En redes sociales predominan mensajes de solidaridad hacia las víctimas civiles iraníes y críticas a la violencia en Medio Oriente.</p>
+
+                        <p>En Estados Unidos, recientes encuestas muestran preocupación porque la intervención militar podría hacer al país «menos seguro» y aumentar los precios del petróleo y la gasolina. Mientras tanto, desde Irán llegan testimonios de civiles afectados por los bombardeos. «Recogimos 20 trozos de carne», relató un sobreviviente. Otros describen miedo constante, edificios destruidos, escasez y familias atrapadas bajo los escombros durante el conflicto.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AUTHORS, IMAGE CREDIT AND SOURCES -->
+            <footer class="endmatter">
+                <section class="authors">
+                    <p class="authors-list">
+                        <strong>Autores:</strong> Luis Gabriel Meléndez, Diego Liendo, Mikaela Peña,
+                        Ambra Lecca, Sabrina Bueno y Domenica Valverde.
+                    </p>
+                </section>
+
+                <div class="image-credit">
+                    Créditos de imágenes: imágenes generadas por ChatGPT.
+                </div>
+
+                <section class="bibliography" id="bibliografia">
+                    <h2>Fuentes y bibliografía</h2>
+
+                    <ol>
+                        <li>
+                            Gonzales García, C. R. (2016). Las relaciones internacionales
+                            del Perú a través del diario Perú21. Encuadres noticiosos en la
+                            información periodística sobre asuntos de Cancillería.
+                            <em>Correspondencias &amp; análisis, (6).</em>
+                            <a href="https://portal.amelica.org/ameli/journal/138/138726014/138726014.pdf"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            Ministerio de Relaciones Exteriores del Perú. (2025).
+                            Cancillería coordina evacuación de al menos 122 peruanos de
+                            Israel e Irán.
+                            <a href="https://www.gob.pe/institucion/rree/noticias/1192874-cancilleria-coordina-evacuacion-de-al-menos-122-peruanos-de-israel-e-iran"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            International Monetary Fund. (2026, March 30).
+                            How the war in the Middle East is affecting energy trade and finance.
+                            <em>IMF Blogs.</em>
+                        </li>
+
+                        <li>
+                            El País. (2026, 15 de marzo).
+                            Von der Leyen advierte del potencial impacto migratorio en la UE
+                            del conflicto en Oriente Próximo.
+                        </li>
+
+                        <li>
+                            Gestión. Dólar se dispara por shock global del petróleo:
+                            ¿Romperá los S/ 3.50 o BCRP lo frenará?
+                        </li>
+
+                        <li>
+                            El Peruano. (2026, 19 de marzo).
+                            Canciller Hugo de Zela: estamos protegiendo la vida de los
+                            peruanos en Medio Oriente.
+                            <a href="https://elperuano.pe/noticia/291626-canciller-hugo-de-zela-estamos-protegiendo-la-vida-de-los-peruanos-en-medio-oriente"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            Ministerio de Relaciones Exteriores del Perú. (2026, 7 de abril).
+                            Canciller Hugo de Zela lideró la quinta sesión del Comando de
+                            Crisis del Medio Oriente donde recibió reportes sobre la grave situación.
+                            <a href="https://www.gob.pe/institucion/rree/noticias/1375591-canciller-hugo-de-zela-lidero-la-quinta-sesion-del-comando-de-crisis-del-medio-oriente-donde-recibio-reportes-sobre-la-grave-situacion"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            Sanders, L. (2026, 10 de marzo).
+                            What Americans think about the war in Iran, according to recent polls.
+                            <em>Los Angeles Times.</em>
+                            <a href="https://www.latimes.com/world-nation/story/2026-03-10/what-americans-think-about-the-war-in-iran-according-to-polls"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            Ministerio de Relaciones Exteriores del Perú. (2025, 13 de junio).
+                            Gobierno del Perú se pronuncia sobre los bombardeos en Irán.
+                            <a href="https://www.gob.pe/institucion/rree/noticias/1187204-gobierno-del-peru-se-pronuncia-sobre-los-bombardeos-en-iran"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+
+                        <li>
+                            TVPerú Noticias. (2025, 13 de junio).
+                            Perú expresa preocupación por bombardeos recientes en Irán.
+                            <a href="https://tvperu.gob.pe/noticias/politica/peru-expresa-preocupacion-por-bombardeos-recientes-en-iran"
+                               target="_blank" rel="noopener noreferrer">Consultar fuente.</a>
+                        </li>
+                    </ol>
+                </section>
+
+                <a class="back-to-top" href="#top">Volver al inicio ↑</a>
+            </footer>
+
+        </article>
+    </main>
+
+</body>
+</html>
