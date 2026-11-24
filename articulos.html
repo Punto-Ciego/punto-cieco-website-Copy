@@ -132,18 +132,34 @@
             aspect-ratio: 1 / 0.85;
             background-color: #2B120E;
             text-decoration: none;
+            overflow: hidden;
+        }
+
+        /* Cover images */
+        .article-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Article 4: match the homepage image framing */
+        .article:nth-child(3) .article-image {
+            overflow: hidden;
+        }
+
+        .article:nth-child(3) .article-image img {
+            object-fit: cover;
+            object-position: left center;
+            transform-origin: left center;
+        }
+
+        .article:nth-child(3) .article-image:hover img {
+            transform: scale(1.015);
         }
 
         .article-image:hover {
             background-color: #47231C;
-        }
-
-        /* Article 6 cover image */
-        .article:first-child .article-image {
-            background-image: url("images/articulo-6-portada.png");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
         }
 
         .article h3 {
@@ -279,7 +295,10 @@
         <section class="articles">
             <article class="article">
                 <a class="article-image" href="articulos/articulo-6.html"
-                   aria-label="Read Fusione gastronomica tra Perù e Italia"></a>
+                   aria-label="Read Fusione gastronomica tra Perù e Italia">
+                    <img src="images/articulo-6-caratula.png"
+                         alt="Portada de Fusione gastronomica tra Perù e Italia">
+                </a>
                 <h3>
                     <a href="articulos/articulo-6.html">
                         Fusione gastronomica tra Perù e Italia
@@ -289,7 +308,10 @@
 
             <article class="article">
                 <a class="article-image" href="articulos/articulo-5.html"
-                   aria-label="Read Does Diversity Affect Who Benefits from Natural Resources?"></a>
+                   aria-label="Read Does Diversity Affect Who Benefits from Natural Resources?">
+                    <img src="images/articulo-5-portada.png"
+                         alt="Portada de Does Diversity Affect Who Benefits from Natural Resources?">
+                </a>
                 <h3>
                     <a href="articulos/articulo-5.html">
                         Does Diversity Affect Who Benefits from Natural Resources?
@@ -299,7 +321,10 @@
 
             <article class="article">
                 <a class="article-image" href="articulos/articulo-4.html"
-                   aria-label="Read ¿Qué lugar tomarán internacionalmente los escudos de las Américas?"></a>
+                   aria-label="Read ¿Qué lugar tomarán internacionalmente los escudos de las Américas?">
+                    <img src="images/articulo-4-portada.png"
+                         alt="Portada de ¿Qué lugar tomarán internacionalmente los escudos de las Américas?">
+                </a>
                 <h3>
                     <a href="articulos/articulo-4.html">
                         ¿Qué lugar tomarán internacionalmente los escudos de las Américas?
@@ -309,7 +334,10 @@
 
             <article class="article">
                 <a class="article-image" href="articulos/articulo-3.html"
-                   aria-label="Read Le Olimpiadi moderne e l’eredità del Palio italiano"></a>
+                   aria-label="Read Le Olimpiadi moderne e l’eredità del Palio italiano">
+                    <img src="images/articulo-3-portada.png"
+                         alt="Portada de Le Olimpiadi moderne e l’eredità del Palio italiano">
+                </a>
                 <h3>
                     <a href="articulos/articulo-3.html">
                         Le Olimpiadi moderne e l’eredità del Palio italiano
@@ -319,7 +347,10 @@
 
             <article class="article">
                 <a class="article-image" href="articulos/articulo-2.html"
-                   aria-label="Read The Cost of Copper and Illegal Mining in Peru"></a>
+                   aria-label="Read The Cost of Copper and Illegal Mining in Peru">
+                    <img src="images/articulo-2-portada.png"
+                         alt="Portada de The Cost of Copper and Illegal Mining in Peru">
+                </a>
                 <h3>
                     <a href="articulos/articulo-2.html">
                         The Cost of Copper and Illegal Mining in Peru
@@ -329,7 +360,10 @@
 
             <article class="article">
                 <a class="article-image" href="articulos/articulo-1.html"
-                   aria-label="Read Cómo la guerra de Irán nos afecta"></a>
+                   aria-label="Read Cómo la guerra de Irán nos afecta">
+                    <img src="images/articulo-1-portada.png"
+                         alt="Portada de Cómo la guerra de Irán nos afecta">
+                </a>
                 <h3>
                     <a href="articulos/articulo-1.html">
                         Cómo la guerra de Irán nos afecta
@@ -339,4 +373,4 @@
         </section>
     </main>
 </body>
-</html>
+</html> 
